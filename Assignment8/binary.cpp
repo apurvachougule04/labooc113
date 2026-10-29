@@ -25,13 +25,11 @@ public:
         d3.inch = this->inch + d2.inch;
         return d3;
 
-
     }
 
      
 };
 
-// Driver Code
 int main() {
     Distance d1(8, 9);
     Distance d2(10, 2);
