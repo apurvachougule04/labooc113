@@ -3,7 +3,9 @@ using namespace std;
 
 class Distance {
 public:
-    int feet, inch;
+    int feet, inch,a=10,a=20,c;
+
+    c=a+b;
 
     // Constructor to initialize the object's value
     Distance(int f, int i) {
@@ -19,12 +21,18 @@ public:
     }
 };
 
+void operator +() {
+        feet++;
+        inch++;
+        cout << "\nFeet & Inches (Increament): " << feet << "'" << inch << "\"" << endl;
+    }
+
 // Driver Code
 int main() {
     Distance d1(8, 9);
-    
+ 
     // Use (-) unary operator with a single operand
     -d1;
-
+    +d1;
     return 0;
 }

@@ -7,8 +7,8 @@ public:
 
     // Default constructor
     Distance() {
-        this->feet = 0;
-        this->inch = 0;
+        this->feet = 30;
+        this->inch = 60;
     }
 
     // Parameterized constructor
@@ -20,10 +20,15 @@ public:
     // Overloading (+) operator to perform addition of two distance objects (Call by reference)
     Distance operator+(const Distance& d2) {
         Distance d3;
+        cout <<"I am operator"<<d2.feet;
         d3.feet = this->feet + d2.feet;
         d3.inch = this->inch + d2.inch;
         return d3;
+
+
     }
+
+     
 };
 
 // Driver Code
@@ -33,9 +38,11 @@ int main() {
     Distance d3;
 
     // Use overloaded operator
-    d3 = d1 + d2;
+    d3 = d2 + d1;
 
+ 
+    
     cout << "\nTotal Feet & Inches: " << d3.feet << "'" << d3.inch << "\"" << endl;
-
+    
     return 0;
 }
